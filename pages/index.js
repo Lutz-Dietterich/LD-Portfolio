@@ -75,6 +75,11 @@ const StyledLink = styled.a`
   color: #fff;
   text-decoration: none;
   font-weight: 700;
+  ovrflow: hidden;
+
+  @media (min-width: 768px) {
+    font-size: 0.5rem;
+  }
 `;
 
 const StyledCard = styled.div`
@@ -92,6 +97,13 @@ const StyledCard = styled.div`
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+
+  @media (max-width: 768px) {
+    width: 80vw;
+    height: auto;
+    top: 20px;
+    left: 10vw;
+  }
 `;
 
 const StyledHeroImage = styled(Image)`
