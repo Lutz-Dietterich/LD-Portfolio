@@ -1,10 +1,19 @@
 import styled from "styled-components";
+import MainMenu from "../MainMenu";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Layout({ children }) {
   return (
     <>
-      <StyledHeader></StyledHeader>
+      <StyledHeader>
+        <StyledLogo
+          src="/img/logo_large.png"
+          width={380}
+          height={112}
+        ></StyledLogo>
+        <MainMenu />
+      </StyledHeader>
       <StyledMain>{children}</StyledMain>
       <StyledFooter />
     </>
@@ -12,31 +21,36 @@ export default function Layout({ children }) {
 }
 
 const StyledHeader = styled.header`
-  position: fixed;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: transparent;
   width: 100%;
-  z-index: 1;
-  margin: 0;
+  height: 20vw;
+  max-height: 180px;
+`;
+
+const StyledLogo = styled(Image)`
+  width: 30vw;
+  height: 10vw;
+  max-width: 380px;
+  max-height: 112px;
+  margin-left: 60px;
 `;
 
 const StyledMain = styled.main`
-  position: relative;
+  position: absolute;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: 100vh;
+  width: 100%;
   top: 0;
-  margin: 0;
 `;
 
 const StyledFooter = styled.footer`
-  position: fixed;
   display: flex;
-  justify-content: center;
-  background-color: #fff;
-  bottom: 0;
-  left: 0;
   width: 100%;
+  height: 35vh;
+  background-color: #252326;
+  margin-top: 2000px;
+  bottom: 0;
 `;
