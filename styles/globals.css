@@ -1,0 +1,14 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: system-ui;
+  background-color: #fffefa;
+  color: darkslategray;
+  letter-spacing: 0.5px;
+}
